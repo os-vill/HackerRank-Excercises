@@ -108,7 +108,7 @@ print(stairCase(10))
         Divide input into one height per unique digit.
         Tallest height is returned."""
 def birthdayCakeCandles(n, lst):
-
+    pass
     #print(lst)
     return ''
 
