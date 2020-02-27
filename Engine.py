@@ -105,7 +105,7 @@ print(stairCase(10))
 
 # B I R T H D A Y  C A K E  C A N D L E S #
 
-print('hi else')
+
 
 # M I N  M A X  S U M #
 
