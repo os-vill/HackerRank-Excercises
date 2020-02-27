@@ -110,23 +110,33 @@ print(stairCase(7))
 #------------------------------------------------------#
 import numpy as np
 var=np.random.randint((3,3)*3)
-print(list(var*81))
+#print(list(var*81)) <-------: print right before birthdayCakeCandles() call.
+#------------------------------------------------------#
+with open('test9.txt') as file:
+    line=file.readlines()
+    listNines=line[1].split(' ')
+    for i in (listNines[0:5]):
+        print(int(i))
+
 #------------------------------------------------------#
 def birthdayCakeCandles(n, lst):
     lst=sorted(lst)
     lst.reverse()
-    print(lst)
-    for i in range(0, n-1):
-        if lst[i+1]<lst[i]:
-            return(i+1)
-        elif lst[i+1]>lst[i]:
-            return i+2
-        else:
+    print(lst[0:10])
+    for i in range(0, n):
+        if lst[i]>lst[i+1]:
+            print('#'*((i+1)*4))
+            print('#'*((i+1)*4), ((i+1)))
+            print('#'*((i+1)*4))
+            return ''
+        elif lst[i]>(lst[i+1]):
             pass
+        else:
+            return lst[-1:-2]
 
-
+print(birthdayCakeCandles(len(listNines), listNines))
+print(list(var*81))
 print(birthdayCakeCandles(len(var),list(var*81)))
-
 
 # M I N  M A X  S U M #
 
