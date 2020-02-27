@@ -101,7 +101,7 @@ def stairCase(n):
         print(('#'*i).rjust(n))
     return ''
 
-print(stairCase(10))
+print(stairCase(7))
 
 # B I R T H D A Y  C A K E  C A N D L E S #
 """Note:
@@ -113,11 +113,17 @@ var=np.random.randint((3,3)*3)
 print(list(var*81))
 #------------------------------------------------------#
 def birthdayCakeCandles(n, lst):
-
+    lst=sorted(lst)
+    lst.reverse()
     print(lst)
-    return ''
-    #pass
-    #return n, lst
+    for i in range(0, n-1):
+        if lst[i+1]<lst[i]:
+            return(i+1)
+        elif lst[i+1]>lst[i]:
+            return i+2
+        else:
+            pass
+
 
 print(birthdayCakeCandles(len(var),list(var*81)))
 
