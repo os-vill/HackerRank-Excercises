@@ -73,7 +73,7 @@ between the sum of its right and left diagonals. It iterates over
 the range(len()) of the array like so: range(len(arr)) and for
 every item (precisely range number, like a count) if it is 1,
 it'll += the arr[i][i] number to a valueOne instance, then reverse
-the arr[i] and += every arr[i][i] to a valueTwo instance, then
+the arr[i] and += every arr[i][i] to a valueTwo instance. Finally
 substract difference and return its absolute value."""
 
 ### P L U S  M I N U S ###
