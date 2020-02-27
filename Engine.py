@@ -107,12 +107,19 @@ print(stairCase(10))
 """Note:
         Divide input into one height per unique digit.
         Tallest height is returned."""
+#------------------------------------------------------#
+import numpy as np
+var=np.random.randint((3,3)*3)
+print(list(var*81))
+#------------------------------------------------------#
 def birthdayCakeCandles(n, lst):
-    pass
-    #print(lst)
-    return ''
 
-print(birthdayCakeCandles(len(primes), primes))
+    print(lst)
+    return ''
+    #pass
+    #return n, lst
+
+print(birthdayCakeCandles(len(var),list(var*81)))
 
 
 # M I N  M A X  S U M #
