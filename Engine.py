@@ -73,7 +73,7 @@ between the sum of its right and left diagonals. It iterates over
 the range(len()) of the array like so: range(len(arr)) and for
 every item (precisely range number, like a count) if it is 1,
 it'll += the arr[i][i] number to a valueOne instance, then reverse
-the arr[i] and += every arr[i][i] to a valueTwo instance. Finally
+the arr[i] and += every arr[i][i] to a valueTwo instance. Finally,
 substract difference and return its absolute value."""
 
 ### P L U S  M I N U S ###
@@ -99,12 +99,20 @@ def plusMinus(array):
 def stairCase(n):
     for i in range(1,n+1):
         print(('#'*i).rjust(n))
-    return ' '
+    return ''
 
 print(stairCase(10))
 
 # B I R T H D A Y  C A K E  C A N D L E S #
+"""Note:
+        Divide input into one height per unique digit.
+        Tallest height is returned."""
+def birthdayCakeCandles(n, lst):
 
+    #print(lst)
+    return ''
+
+print(birthdayCakeCandles(len(primes), primes))
 
 
 # M I N  M A X  S U M #
