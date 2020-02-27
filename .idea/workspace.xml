@@ -216,7 +216,7 @@
       <workItem from="1582580703396" duration="8743000" />
       <workItem from="1582689760192" duration="9813000" />
       <workItem from="1582738233458" duration="17520000" />
-      <workItem from="1582771877531" duration="10000" />
+      <workItem from="1582771877531" duration="446000" />
     </task>
     <servers />
   </component>
@@ -230,22 +230,22 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1225" height="31" key="GridCell.Tab.0.bottom" timestamp="1582772091616">
+    <state width="1225" height="30" key="GridCell.Tab.0.bottom" timestamp="1582772290750">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1225" height="31" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582772091616" />
-    <state width="1225" height="31" key="GridCell.Tab.0.center" timestamp="1582772091616">
+    <state width="1225" height="30" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582772290750" />
+    <state width="1225" height="30" key="GridCell.Tab.0.center" timestamp="1582772290734">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1225" height="31" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582772091616" />
-    <state width="1225" height="31" key="GridCell.Tab.0.left" timestamp="1582772091616">
+    <state width="1225" height="30" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582772290734" />
+    <state width="1225" height="30" key="GridCell.Tab.0.left" timestamp="1582772290734">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1225" height="31" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582772091616" />
-    <state width="1225" height="31" key="GridCell.Tab.0.right" timestamp="1582772091616">
+    <state width="1225" height="30" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582772290734" />
+    <state width="1225" height="30" key="GridCell.Tab.0.right" timestamp="1582772290734">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1225" height="31" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582772091616" />
+    <state width="1225" height="30" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582772290734" />
     <state width="1225" height="188" key="GridCell.Tab.1.bottom" timestamp="1582699052328">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -277,6 +277,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FeelingMachine$Engine.coverage" NAME="Engine Coverage Results" MODIFIED="1582770699796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/HackerRank_Excercises$Engine.coverage" NAME="Engine Coverage Results" MODIFIED="1582772091601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/HackerRank_Excercises$Engine.coverage" NAME="Engine Coverage Results" MODIFIED="1582772290734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
