@@ -2,7 +2,7 @@
 listA=list(range(1,11))
 primes=[a for a in listA if a%2 != 0]
 
-### S I M P L E  A R R A Y  S U M ###
+### --1--  S I M P L E  A R R A Y  S U M ###
 
 data=(len(listA), listA)
 
@@ -15,7 +15,7 @@ def simpleArraySum(data):
 """simpleArraySum is a function that takes input(data)
 as an argument and returns the sum of item for item in data[1]"""
 
-### C O M P A R E  T H E  T R I P L E T S ###
+### --2--  C O M P A R E  T H E  T R I P L E T S ###
 
 def compareTriplets(a, b):
     alice=0
@@ -38,7 +38,7 @@ to get indexes to play with. The it compares a[i] > b[i] and viceversa
 to get a score. Score count for each argument is added to its corresponding
 parameter."""
 
-### A  V E R Y  B I G  S U M ###
+### --3--  A  V E R Y  B I G  S U M ###
 
 def aVeryBigSum(x, y):
     return sum(i for i in y)
@@ -51,7 +51,7 @@ and the first one. It seems like the resulting function is the same as
 SIMPLE ARRAY SUM. Passed HackerRank: Apparently is a repeated exercise
 where the question is formulated differently."""
 
-### D I A G O N A L  D I F F E R E N C E ###
+### --4--  D I A G O N A L  D I F F E R E N C E ###
 
 arr=[1,2,3],[4,5,6],[9,8,9]
 
@@ -76,7 +76,7 @@ it'll += the arr[i][i] number to a valueOne instance, then reverse
 the arr[i] and += every arr[i][i] to a valueTwo instance. Finally,
 substract difference and return its absolute value."""
 
-### P L U S  M I N U S ###
+### --5--  P L U S  M I N U S ###
 
 def plusMinus(array):
     count=[0,0,0]
@@ -94,7 +94,7 @@ def plusMinus(array):
 
 #print(plusMinus([-4, 3, -9, 0, 4, 1]))
 
-### S T A I R C A S E ###
+### --6--  S T A I R C A S E ###
 
 def stairCase(n):
     for i in range(1,n+1):
@@ -103,7 +103,7 @@ def stairCase(n):
 
 print(stairCase(7))
 
-# B I R T H D A Y  C A K E  C A N D L E S #
+# --7-- B I R T H D A Y  C A K E  C A N D L E S #
 """Note:
         Divide input into one height per unique digit.
         Tallest height is returned."""
@@ -117,26 +117,25 @@ with open('test9.txt') as file:
     listNines=line[1].split(' ')
     for i in (listNines[0:5]):
         print(int(i))
-
 #------------------------------------------------------#
-def birthdayCakeCandles(n, lst):
-    lst=sorted(lst)
-    lst.reverse()
-    print(lst[0:10])
-    for i in range(0, n):
-        if lst[i]>lst[i+1]:
-            print('#'*((i+1)*4))
-            print('#'*((i+1)*4), ((i+1)))
-            print('#'*((i+1)*4))
-            return ''
-        elif lst[i]>(lst[i+1]):
-            pass
-        else:
-            return lst[-1:-2]
+#------------------------------------------------------#
+equalDigits=[0,0,0,0]
 
-print(birthdayCakeCandles(len(listNines), listNines))
-print(list(var*81))
-print(birthdayCakeCandles(len(var),list(var*81)))
+def birthdayCakeCandles(n, ar):
+    ar.sort()
+    ar.reverse()
+    print(ar)
+    for i in range(n-1):
+        if ar[i]>ar[i+1]:
+            return(i+1)
+        else:
+            pass
+    return n
+
+print(list(var))
+print(birthdayCakeCandles(len(var),list(var)))
+print(birthdayCakeCandles(len(equalDigits), equalDigits))
+#print(birthdayCakeCandles(len(listNines), listNines))
 
 # M I N  M A X  S U M #
 
