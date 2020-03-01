@@ -136,24 +136,6 @@ def birthdayCakeCandles(n, ar):
 #print(birthdayCakeCandles(len(equalDigits), equalDigits))
 #print(birthdayCakeCandles(len(listNines), listNines))
 
-# --8--  M I N  M A X  S U M #
-
-
-"""
-def minMaxSum(array):
-    for i in array:
-        array.replace(arr[i], 0)
-        print(array)
-
-    return''
-
-fiveDigits=[1,2,3,4,5,9,15,19]
-#fiveEquals=[1,1,1,1,1]
-minMaxSum(fiveDigits)
-#minMaxSum(fiveEquals)
-"""
-
-
 
 #-----------------------------------#
 #-----------------------------------#
@@ -169,6 +151,7 @@ def subFunction(testList, repList, start=0):   #<---[first line defines a functi
     length=len(repList)                        #<---[defines a var called length, set to len(repl_list).-----]
     for i in range(start, len(testList)):      #<---[loop id over range(start, len(test_list).---------------]
         if testList[i:i+length]==repList:      #<---[if testList[id:id+length]==repList.---------------------]
+            #print(i, i+length)
             return i, i + length               #<---[return id and (id + length).----------------------------]
 """
 amazing short little app. Takes two lists. One, the testList, is the main list on which you want to perform
@@ -176,21 +159,21 @@ changes and two, the second one called repList, it contains the values on -the m
 replaced. Then !!check this out!!, a third argument which is a self-contained variable set to the value of 0.
 Write that down, ok, now interesting part, FOR item within range of -start- until the length of the 
 testList IF THE INDEX OF testList SET TO THE RANGE OF [i:i+length] <---opens portal---> IS ==EQUAL== TO
--THE- repList, then it returns ~THOSE~ values. So basically it locates a specific SET OF ITEMs by looking for
-compatibility, and then returns the 3 values if it found a match. This example does not include what
-to do if the values don't match, so note to self..
+-THE- repList, then it returns ~THOSE~ values. So basically it locates a specific SET OF ITEMs 
+--WITHIN THAT RANGE--
+by looking for MATCHES, and then returns the 3 values if it found a match. This example does not include what
+to do if the values don't match, so note to self.
 
 """
 #helper function to perform final task
-def replace_sub(test_list, repl_list, new_list):    #<---[]
-    length=len(new_list)                            #<---[]
-    idx=0                                           #<---[]
-    for start, end in iter(lambda: rain(test_list, repl_list, idx), None):
-        #
-        #
-        #
-        test_list[start:end]=new_list               #<---
-        idx=start+length                            #<---
+def replaceSub(testList, repList, newList):        #<---[takes three arguments, testList, repList and newList]
+    length=len(newList)                       #<---[acknowledge length of newList and assign to length var.---]
+    idx=0                                          #<---[counter for index.----------------------------------]
+    for start, end in iter(lambda: subFunction(test_list, repl_list, idx), None):
+        #start and end could be x and y. lambda function retrieves tuple from subFunction().
+        #then looks for that range in testList and replaces that content with the contents of new list.
+        test_list[start:end]=new_list               #<---[Assigns newList with the value of testList range.---]
+        #idx=start+length                           #<---[index=first and second point from subFunction.------]
 
 # initializing list
 test_list=[4,5,6,7,10,2]
@@ -201,6 +184,14 @@ repl_list=[5,6,7]
 new_list=[11,1]
 # Replace sublist with other in list
 # using loop (when sublist is given)
-replace_sub(test_list, repl_list, new_list)
+replaceSub(test_list, repl_list, new_list)
 # Printing result
 print("List after replacing sublist: "+ str(test_list))
+
+#-------substitution--tool----------#
+#-----------------------------------#
+#-----------------------------------#
+#-----------------------------------#
+
+# --8--  M I N  M A X  S U M #
+
