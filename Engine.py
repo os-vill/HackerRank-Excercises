@@ -165,19 +165,32 @@ minMaxSum(fiveDigits)
 
 
 #helper function to find elements
-def find_sub_idx(test_list, repl_list, start=0):
-    length=len(repl_list)
-    for idx in range(start, len(test_list)):
-        if test_list[idx:idx+length]==repl_list:
-            print(idx, idx+length)
-            return idx, idx + length
+def subFunction(testList, repList, start=0):   #<---[first line defines a function that takes three args.----]
+    length=len(repList)                        #<---[defines a var called length, set to len(repl_list).-----]
+    for i in range(start, len(testList)):      #<---[loop id over range(start, len(test_list).---------------]
+        if testList[i:i+length]==repList:      #<---[if testList[id:id+length]==repList.---------------------]
+            return i, i + length               #<---[return id and (id + length).----------------------------]
+"""
+amazing short little app. Takes two lists. One, the testList, is the main list on which you want to perform
+changes and two, the second one called repList, it contains the values on -the main list- that are to be 
+replaced. Then !!check this out!!, a third argument which is a self-contained variable set to the value of 0.
+Write that down, ok, now interesting part, FOR item within range of -start- until the length of the 
+testList IF THE INDEX OF testList SET TO THE RANGE OF [i:i+length] <---opens portal---> IS ==EQUAL== TO
+-THE- repList, then it returns ~THOSE~ values. So basically it locates a specific SET OF ITEMs by looking for
+compatibility, and then returns the 3 values if it found a match. This example does not include what
+to do if the values don't match, so note to self..
+
+"""
 #helper function to perform final task
-def replace_sub(test_list, repl_list, new_list):
-    length=len(new_list)
-    idx=0
-    for start, end in iter(lambda: find_sub_idx(test_list, repl_list, idx), None):
-        test_list[start:end]=new_list
-        idx=start+length
+def replace_sub(test_list, repl_list, new_list):    #<---[]
+    length=len(new_list)                            #<---[]
+    idx=0                                           #<---[]
+    for start, end in iter(lambda: rain(test_list, repl_list, idx), None):
+        #
+        #
+        #
+        test_list[start:end]=new_list               #<---
+        idx=start+length                            #<---
 
 # initializing list
 test_list=[4,5,6,7,10,2]
