@@ -101,7 +101,7 @@ def stairCase(n):
         print(('#'*i).rjust(n))
     return ''
 
-print(stairCase(7))
+#print(stairCase(7))
 
 # --7-- B I R T H D A Y  C A K E  C A N D L E S #
 """Note:
@@ -169,24 +169,24 @@ to do if the values don't match, so note to self.
 def replaceSub(testList, repList, newList):        #<---[takes three arguments, testList, repList and newList]
     length=len(newList)                       #<---[acknowledge length of newList and assign to length var.---]
     idx=0                                          #<---[counter for index.----------------------------------]
-    for start, end in iter(lambda: subFunction(test_list, repl_list, idx), None):
+    for start, end in iter(lambda: subFunction(testList, repList, idx), None):
         #start and end could be x and y. lambda function retrieves tuple from subFunction().
         #then looks for that range in testList and replaces that content with the contents of new list.
-        test_list[start:end]=new_list               #<---[Assigns newList with the value of testList range.---]
-        #idx=start+length                           #<---[index=first and second point from subFunction.------]
-
+        testList[start:end]=newList               #<---[Assigns newList with the value of testList range.---]
+        #idx=start+length                         #<---[------]
+        print(testList)
 # initializing list
 test_list=[4,5,6,7,10,2]
 # printing original list
-print("The original list is: "+str(test_list))
+#-----print("The original list is: "+str(test_list))
 # replace list
 repl_list=[5,6,7]
-new_list=[11,1]
+new_list=[0,0,0]
 # Replace sublist with other in list
 # using loop (when sublist is given)
-replaceSub(test_list, repl_list, new_list)
+#------this calls function: replaceSub(test_list, repl_list, new_list)
 # Printing result
-print("List after replacing sublist: "+ str(test_list))
+#------print("List after replacing sublist: "+ str(test_list))
 
 #-------substitution--tool----------#
 #-----------------------------------#
@@ -195,3 +195,36 @@ print("List after replacing sublist: "+ str(test_list))
 
 # --8--  M I N  M A X  S U M #
 
+"""Note:
+Use substitution tool."""
+"""
+def minMaxSum(array):
+    lst=[]
+    for i in range(0, len(array)):
+        lst.append(array[i])
+        array[i]=0
+        print(array)
+        array[:i+1]=lst[:i+1]
+"""
+def minMaxSum(array):
+    lst=[]
+    lst.append([i for i in array])
+    lst=lst[0]
+    #print(lst)
+    cam=[]
+    for i in range(len(array)):
+        array[i]=0
+        cam.append(sum(array))
+        array[:i+1]=lst[:i+1]
+    print(cam)
+    print(max(cam), min(cam))
+
+
+
+fiveDigits=[1,2,3,4,5,6,7,9,15,19]
+#fiveEquals=[1,1,1,1,1]
+minMaxSum(fiveDigits)
+#minMaxSum(fiveEquals)
+
+
+#  --9--  C O U N T I N G  V A L L E Y S #
