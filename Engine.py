@@ -197,15 +197,7 @@ new_list=[0,0,0]
 
 """Note:
 Use substitution tool."""
-"""
-def minMaxSum(array):
-    lst=[]
-    for i in range(0, len(array)):
-        lst.append(array[i])
-        array[i]=0
-        print(array)
-        array[:i+1]=lst[:i+1]
-"""
+
 def minMaxSum(array):
     lst=[]
     lst.append([i for i in array])
@@ -216,15 +208,38 @@ def minMaxSum(array):
         array[i]=0
         cam.append(sum(array))
         array[:i+1]=lst[:i+1]
-    print(cam)
-    print(max(cam), min(cam))
+        #print(cam)
+    print(min(cam), max(cam))
 
 
 
-fiveDigits=[1,2,3,4,5,6,7,9,15,19]
+#fiveDigits=[1,2,3,4,5,6,7,9,15,19]
 #fiveEquals=[1,1,1,1,1]
-minMaxSum(fiveDigits)
+#minMaxSum(fiveDigits)
 #minMaxSum(fiveEquals)
 
 
-#  --9--  C O U N T I N G  V A L L E Y S #
+#  --9--  T I M E  C O N V E R S I O N #
+"""
+07:05:45PM
+19:05:45PM
+
+"""
+def timeConversion(s):
+    if s.endswith("PM"):
+        var=int((s[0:2]))
+        print("{}{}".format(var+12,s[2:8]))
+    else:
+        print("{}".format(s[0:8]))
+
+timeConversion("07:05:45PM")
+timeConversion("07:05:45AM")
+
+
+
+
+
+
+
+
+
