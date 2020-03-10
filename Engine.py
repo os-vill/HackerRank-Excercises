@@ -224,7 +224,7 @@ def minMaxSum(array):
 07:05:45PM
 19:05:45PM
 
-"""
+
 def timeConversion(s):
     if s.endswith("PM"):
         var=int((s[0:2]))
@@ -234,12 +234,80 @@ def timeConversion(s):
 
 timeConversion("07:05:45PM")
 timeConversion("07:05:45AM")
+"""
+
+"""FAILED TRY, SOLUTION BELOW, ANALYSIS PENDING"""
+"""On initial assesment, it looks like the mistake was originated
+byt using the print statement instead of returning the result.
+
+In the successful solution a variable was specifically created to
+hold the result to enable the use of return."""
+
+def timeConversion(s):
+    # Complete this function
+    amOrPm = s[-2:]
+    toReturn = ""
+
+    if(amOrPm == "PM"):
+        if(int(s[0:2]) < 12):
+            toReturn = toReturn + str(12 + int(s[0:2])) + s[2:-2]
+        else:
+            toReturn = toReturn + str(int(s[0:2])) + s[2:-2]
+    else:
+        if(s[0:2] == '12'):
+            toReturn = toReturn + "00" + s[2:-2]
+        else:
+            toReturn = toReturn + s[:-2]
+
+    return toReturn
+
+#print(timeConversion("07:05:45PM"))
+#timeConversion("07:05:45AM")
 
 
+#  --10--  C O U N T I N G  V A L L E Y S #
 
+"""n steps, for every step hiker recorded if it was uphill, U,
+or a downhill, D. the hike starts and ends at sea level and
+each step represents a unit change of altitude.
 
+A Mountain is a sequence of consecutive steps ABOVE sea level and
+A Valley is a sequence of consecutive steps below sea level.
 
+Given hikers sequence of up and down steps during his last hike,
+find and print the number of valleys he walked through.
 
+"""
+def countingValleys(n, ar):
+    count=0
+    valleyCount=0
+    for i in range(n):
+        if ar[i] == "U":
+            count+=1
+            if count==0:
+                valleyCount+=1
+        elif ar[i]=="D":
+            count-=1
+    print(valleyCount)
 
+#countingValleys(10, "UDDDUDUUDU")
+#countingValleys(8, "UDDDUDUU")
+
+#  --11--  S T O C K  M E R C H A N T #
+
+def stockMerchant(n, arr):
+    arr.sort()
+    pairs=0
+    count=0
+    while count < n-1:
+        if arr[count]==arr[count+1]:
+            count+=2
+            pairs+=1
+        else:
+            count+=1
+    return(pairs)
+
+#stockMerchant(10, [50,10,20,20,10,10,30,50,10,20])
+print(stockMerchant(9, [10,20,20,10,10,30,50,10,20]))
 
 
